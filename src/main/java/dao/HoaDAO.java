@@ -1,4 +1,3 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -30,7 +29,7 @@ public class HoaDAO {
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                ds.add(new Hoa(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getString(4), rs.getInt(5), rs.getDate(6)));
+                 ds.add(new Hoa(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getString(4), rs.getInt(5), rs.getDate(6)));
             }
         } catch (Exception ex) {
             System.out.println("Loi:" + ex.toString());
@@ -56,7 +55,7 @@ public class HoaDAO {
         return ds;
     }
 
-    //phuong thuc doc tat ca san pham (Hoa) từ CSDL
+     //phuong thuc doc tat ca san pham (Hoa) từ CSDL
     public ArrayList<Hoa> getAll() {
         ArrayList<Hoa> ds = new ArrayList<>();
         String sql = "select * from Hoa";
